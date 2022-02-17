@@ -1,5 +1,11 @@
 {
   "dependencies": {
-    "navigo": "^8.11.1"
+    "axios": "^0.26.0",
+    "navigo": "^8.11.1",
+    "toastr": "^2.1.4"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0"
   }
 }

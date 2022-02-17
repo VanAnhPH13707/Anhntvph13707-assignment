@@ -2,55 +2,40 @@ import Navigo from "navigo";
 import HomePage from "./Pages/home";
 import AboutPage from "./Pages/about";
 import ProductPage from "./Pages/product";
-import SignUpPage from "./Pages/sign_up";
-import SignInPage from "./Pages/sign_in";
-import DetailNewsPage from "./Pages/detailNews";
+import Signup from "./Pages/signup";
+import Signin from "./Pages/signin";
 import DashBoardPage from "./Pages/admin/dashboard";
-import AddNewsPage from "./Pages/admin/news/add";
-import AdminNewsPage from "./Pages/admin/news";
-import EditNewsPage from "./Pages/admin/news/edit";
+import AdminPosts from "./Pages/admin/posts";
+import AdminAddPosts from "./Pages/admin/posts/add";
+import AdminEditposts from "./Pages/admin/posts/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
-const print = (content) => {
-    document.getElementById("app").innerHTML = content;
+const print = async (content, id) => {
+    document.getElementById("app").innerHTML = await content.render(id);
+    if (content.afterRender) await content.afterRender(id);
 };
+router.on("/admin/*", () => {}, {
+    before: (done) => {
+        if (localStorage.getItem("user")) {
+            console.log("ahihi");
+            const userId = JSON.parse(localStorage.getItem("user")).id;
+            if (userId === 1) {
+                done();
+            } else {
+                document.location.href = "/";
+            }
+        }
+    },
+});
 router.on({
-    "/": () => {
-        print(HomePage.render());
-    },
-    "/about": () => {
-        print(AboutPage.render());
-    },
-    "/product": () => {
-        print(ProductPage.render());
-    },
-    "/sign_up": () => {
-        print(SignUpPage.render());
-    },
-    "/sign_in": () => {
-        print(SignInPage.render());
-    },
-    "/news/:id": ({ data }) => {
-        const { id } = data;
-        print(DetailNewsPage.render(id));
-    },
-    "/admin/dashboard": () => {
-        print(DashBoardPage.render());
-    },
-    "/admin/news": () => {
-        print(AdminNewsPage.render());
-    },
-    "/admin/news/add": () => {
-        console.log("12");
-        print(AddNewsPage.render());
-    },
-    "/admin/news/edit": () => {
-        console.log("12");
-        print(EditNewsPage.render());
-    },
-    "/admin/news/edit:id": ({ data }) => {
-        const { id } = data;
-        print(EditNewsPage.render(id));
-    },
+    "/": () => print(HomePage),
+    "/about": () => print(AboutPage),
+    "/products": () => print(ProductPage),
+    "/signup": () => print(Signup),
+    "/signin": () => print(Signin),
+    "/admin/dashboard": () => print(DashBoardPage),
+    "/admin/posts": () => print(AdminPosts),
+    "/admin/posts/add": () => print(AdminAddPosts),
+    "/admin/posts/:id/edit": ({ data }) => print(AdminEditposts, data.id),
 });
 router.resolve();

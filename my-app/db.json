@@ -1,0 +1,12 @@
+{
+  "posts": [
+    
+  ],
+  "users": [
+    {
+      "email": "anhntvph13707@fpt.edu.vn",
+      "password": "$2a$10$ywvUxA/VLBHCbJFq2vRo6uGLPzO5QWpaQqWzfNKgLaQd9Atq/AoDy",
+      "id": 1
+    }
+  ]
+}
