@@ -25,20 +25,20 @@ const AdminAddPosts = {
                 <input type="text" name="name" class="mt-5 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" id="title-post">
                 </div>
                 <div>
-                    <input type="file" class="border border-black" id="img-post" /> 
+                    <input type="file" class="mt-5 border border-black" id="img-post" /> 
                 </div>
                 <div>
                 <label for="" class="font-bold">Nội dung</label>
                 <textarea name="sub_decription" class="mt-5 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" id="desc-post"></textarea>
                 </div>
             </div>
-            <div class="flex gap-x-1 grid grid-cols-2  ">
+            <div class="max-w-5xl mx-auto flex gap-x-1 grid grid-cols-2">
                 <div>
                     <a href="#" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Hủy</a>
                 </div>
                 <div>
                     <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Cập nhật
+                    Thêm
                     </button>
                 </div>
             </div>
@@ -76,6 +76,7 @@ const AdminAddPosts = {
                 img: data.url,
                 desc: document.querySelector("#desc-post").value,
             });
+            document.location.href = "/admin/posts";
         });
     },
 };

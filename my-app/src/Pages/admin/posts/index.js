@@ -28,53 +28,46 @@ const AdminPosts = {
                 </div>
             </header>
             <main>
-              <div class="flex flex-col">
-                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                  <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                      <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
-                          <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                              STT
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                             Ảnh
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Tiêu đề
-                            </th>
-                           
-                            <th scope="col" class="relative px-6 py-3">
-                            
-                              <a href="edit" class="sr-only">Edit</a>
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                        ${response.data.map((post, index) => `
-                          
-                        <tr>
-                        <td>${index + 1}</td>
-                        <td>
-                          <img src="${post.img}" alt="" width="50"/>
+            </main>
+          </div>
+          <div class="flex flex-col">
+            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">STT</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ảnh</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tiêu đề</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nội dung</th>
+                        <th scope="col" class="relative px-6 py-3">
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                    ${response.data.map((post, index) => `
+                      <tr>
+                        <td class="px-6 py-4 whitespace-nowrap">${index + 1}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                        <img src="${post.img}" alt="" width="50"/>
                         </td>
                         <td>
-                          <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">${post.title}</a></h3>
+                        <h3 class="my-3 "><a href="" class="font-normal text-lg text-black ">${post.title}</a></h3>
                         </td>
-                        td>
-                          a href="/admin/posts/${post.id}/edit">Edit</a>
+                        <td>${post.desc}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                          <a href="/admin/posts/${post.id}/edit" class=" bg-green-600 text-white inline-block py-3 px-5 rounded">Edit</a>
                           <button data-id="${post.id}" class="btn bg-red-500 text-white inline-block py-3 px-5 rounded">Delete</button>
                         </td>
-                        `).join("")}
-                          
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                      </tr>
+                      `).join("")}
+                      <!-- More people... -->
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </main>
+            </div>
           </div>
     
       `;
@@ -89,7 +82,7 @@ const AdminPosts = {
             btn.addEventListener("click", () => {
                 const confirm = window.confirm("Bạn có chắc chắn muốn xóa không?");
                 if (confirm) {
-                    axios.delete(`https://5e79b4b817314d00161333da.mockapi.io/posts/${id}`);
+                    axios.delete(`http://localhost:3001/posts/${id}`);
                 }
             });
         });

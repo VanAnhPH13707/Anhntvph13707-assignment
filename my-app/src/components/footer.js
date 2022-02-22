@@ -1,8 +1,8 @@
 const Footer = {
     render() {
-        return /* html */`<div class="mx-auto container bg-zinc-900 py-10 xl:px-20 lg:px-12 sm:px-6 px-4 mt-5">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 md:gap-8 gap-4">
-            <div class="sm:ml-0 ml-10 pl-12 flex flex-col">
+        return /* html */`<div class="2xl:container 2xl:mx-auto bg-zinc-900 py-10 xl:px-20 lg:px-12 sm:px-6 px-4 mt-5">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 md:gap-8 gap-4 pl-14">
+            <div class="sm:ml-0 ml-10 pl-14 flex flex-col">
                 <h2 class="text-base font-semibold leading-4 text-white">Company</h2>
                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-amber-500 text-base leading-4 mt-6 text-white cursor-pointer">Blog</a>
                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-amber-500 text-base leading-4 mt-6 text-white cursor-pointer">Pricing</a>
@@ -60,7 +60,7 @@ const Footer = {
                     </button>
                 </div>
             </div>
-            <div class=" pl-10 flex flex-col">
+            <div class=" pl-14 flex flex-col">
                 <h2 class="text-base font-semibold leading-4  text-white">Support</h2>
                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-amber-500 text-base leading-4 mt-6 text-white cursor-pointer">Legal policy</a>
                 <a href="javascript:void(0)" class="focus:outline-none focus:underline hover:text-amber-500 text-base leading-4 mt-6 text-white cursor-pointer">Status policy</a>

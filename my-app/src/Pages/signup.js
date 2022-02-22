@@ -21,7 +21,7 @@ const Signup = {
                     <div class="rounded-md shadow-sm -space-y-px">
                         <div>
                         <label for="fullname" class="">Họ Và Tên</label>
-                        <input id="fullname" name="email" type="text" autocomplete="fullname" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Nhập tên">
+                        <input id="fullname" name="fullname" type="text" autocomplete="fullname" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Nhập tên">
                         </div>
                         <div>
                         <label for="email-address" class="">Email</label>
@@ -41,7 +41,7 @@ const Signup = {
                         </div>
                         <div class="text-sm">
                             <span class="text-slate-400">Bạn đã có tài khoản> </span>
-                            <a href="/sign_in" class="font-medium text-amber-500 hover:text-amber-400">
+                            <a href="/signin" class="font-medium text-amber-500 hover:text-amber-400">
                                 Đăng nhập
                             </a>
                         </div>
@@ -64,6 +64,7 @@ const Signup = {
                 const { data } = await signup({
                     email: document.querySelector("#email").value,
                     password: document.querySelector("#password").value,
+                    fullname: document.querySelector("#fullname").value,
                 });
                 if (data) {
                     toastr.success("Đăng ký thành công, chuyển trang sau 2s");

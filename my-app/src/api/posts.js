@@ -13,7 +13,7 @@ export const remove = (id) => {
     return instance.detele(url);
 };
 export const add = (post) => {
-    const url = `/posts/add`;
+    const url = `/posts`;
     return instance.post(url, post);
 };
 export const edit = (post) => {
