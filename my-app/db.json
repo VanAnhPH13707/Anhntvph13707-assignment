@@ -17,12 +17,6 @@
       "title": "Những tông màu “sánh đôi” hoàn hảo với trang phục xanh navy",
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645194812/dic5wv4qargrzylsql6a.jpg",
       "desc": "CÁC SẮC THÁI XANH DƯƠNG\nLà gam màu “dễ tính”, xanh navy dễ dàng đồng điệu cùng các tông màu xanh, từ xanh baby ngọt ngào, xanh cobalt cho đến xanh mòng két. Để tạo được hiệu ứng thị giác hoàn hảo cho tổng thể trang phục, bạn nên áp dụng công thức layer và chú ý đến độ đậm nhạt của các sắc thái xanh.\n\nNỔI BẬT VỚI GAM MÀU HỒNG\nĐể cân bằng hiệu ứng màu sắc nóng-lạnh, màu hồng sẽ là lựa chọn hoàn hảo dành cho trang phục xanh navy. Chỉ cần điểm xuyết bằng một thiết kế mang sắc hồng, bạn đã sẵn sàng xuống phố với một diện mạo thật ấn tượng.\n\nSẮC ĐỎ ẤN TƯỢNG\nNếu màu hồng mang đến sự trẻ trung, ngọt ngào thì tông màu đỏ sẽ giúp các cô nàng thêm phần quyến rũ và thu hút hơn. Bạn có thể chọn đầm họa tiết đỏ-xanh navy, diện jacket phủ ngoài sweater sọc đỏ hoặc kết hợp cùng các phụ kiện tông màu đỏ trên nền trang phục xanh.\n\nMÀU CAM THỜI THƯỢNG\nĐể chinh phục “bộ đôi” xanh navy và màu cam, bạn nên “tối giản hóa” tổng thể bằng những chi tiết trang phục đi kèm từ tông màu trung tính như đen, trắng, xám…"
-    },
-    {
-      "id": "tlJ1Rv8",
-      "title": "váy hoa",
-      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645363594/mllp09bst4kbsmjrve0p.jpg",
-      "desc": "thời trang"
     }
   ],
   "users": [
@@ -97,6 +91,14 @@
       "price": "140.000",
       "id": "zr10_FM",
       "quantity": "70"
+    },
+    {
+      "title": "VÁY ĐẦM MAXI BCBG",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645671905/c2e3blnoevg5ohrfpgsv.jpg",
+      "desc": "dhfdkg.",
+      "price": "120000",
+      "quantity": "23",
+      "id": "chrr9ki"
     }
   ]
 }

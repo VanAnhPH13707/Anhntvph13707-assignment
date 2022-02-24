@@ -18,7 +18,8 @@ const ProductDetailPage = {
        
                 <div class="w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center">
                     <h2 class="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 dark:text-white mt-4">${product.title}</h2>
-                    <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 dark:text-white py-10">${product.price}</p> 
+                    <p class="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-6 text-orange-700 dark:text-white py-10">${product.price}đ</p> 
+                    <span>Số lượng</span><br>
                     <input type="number" id="inputValue" class="border border-black"/>
                     <button class="focus:outline-none focus:ring-2 hover:bg-black focus:ring-offset-2 focus:ring-gray-800 font-medium text-base leading-4 text-white bg-gray-800 w-full py-5 lg:mt-12 mt-6 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100" data-id="${product.id}" id="btnAddToCart">Add to cart</button>
                 </div>
